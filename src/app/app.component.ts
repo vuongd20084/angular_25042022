@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular';
+  //Buổi 1
+  // title = 'angular';
+  // color='blue';
+  // array=[1,2,3,4,5,6];
+  // mausac='red';
+  // html='<h1>Inner Html</h1>'
+  /////////////////
+  
 }
