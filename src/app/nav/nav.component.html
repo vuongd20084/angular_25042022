@@ -1,8 +1,28 @@
 <nav>
-  <ul>
-    <li><a routerLink="/">Trang chủ</a></li>
-    <li><a routerLink="/danhmuc">Danh mục</a></li>
-    <li><a routerLink="/sanpham">Sản phẩm</a></li>
-    <li><a routerLink="/thanhvien">Thành viên</a></li>
-  </ul>
+  <div class="container">
+    <div class="nav__main">
+      <div class="row">
+        <div class="col-md-9">
+          <ul>
+            <li><a routerLink="/">Trang chủ</a></li>
+            <li><a routerLink="/danhmuc">Danh mục</a></li>
+            <li><a routerLink="/sanpham">Sản phẩm</a></li>
+            <li><a routerLink="/thanhvien">Thành viên</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <form action="">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" />
+              <div class="input-group-append">
+                <button class="btn btn-success" type="submit">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </nav>
