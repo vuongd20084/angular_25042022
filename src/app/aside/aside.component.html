@@ -1,1 +1,10 @@
-<aside>aside</aside>
+<aside>
+  <h3>Danh mục sản phẩm</h3>
+  <ul>
+    <li *ngFor="let i of aside_data">
+      <a routerLink="/danhmuc">
+        {{ i.name }}
+      </a>
+    </li>
+  </ul>
+</aside>

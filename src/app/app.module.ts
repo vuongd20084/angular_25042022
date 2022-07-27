@@ -13,6 +13,10 @@ import { CategoryComponent } from './category/category.component';
 import { ProductComponent } from './product/product.component';
 import { UserComponent } from './user/user.component';
 import { Page404Component } from './page404/page404.component';
+import { InfoComponent } from './info/info.component';
+
+//Sử dụng Api
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -26,11 +30,14 @@ import { Page404Component } from './page404/page404.component';
     CategoryComponent,
     ProductComponent,
     UserComponent,
-    Page404Component
+    Page404Component,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    //import HttpClientModule after BrowserModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
