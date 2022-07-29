@@ -20,7 +20,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path : 'danhmuc',
+    path : 'danhmuc/:id',
     component: CategoryComponent
   },
   {

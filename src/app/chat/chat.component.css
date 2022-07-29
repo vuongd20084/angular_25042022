@@ -1,0 +1,15 @@
+.chat{
+    width: 300px;
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    padding: 10px;
+    background: gray;
+    border-radius: 5px;
+}
+.chat .content{
+    height: 150px;
+    background: white;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}

@@ -15,7 +15,7 @@ export class AppComponent {
   /////////////////
 
   sendingChild(data:any){
-    console.log(data)
+    // console.log(data)
   }
   
 }

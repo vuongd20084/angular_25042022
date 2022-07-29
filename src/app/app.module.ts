@@ -18,6 +18,12 @@ import { InfoComponent } from './info/info.component';
 //Sử dụng Api
 import {HttpClientModule} from '@angular/common/http'
 
+//Socket io
+import { ChatComponent } from './chat/chat.component';
+
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+
+const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,13 +37,15 @@ import {HttpClientModule} from '@angular/common/http'
     ProductComponent,
     UserComponent,
     Page404Component,
-    InfoComponent
+    InfoComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     //import HttpClientModule after BrowserModule
-    HttpClientModule
+    HttpClientModule,
+    SocketIoModule.forRoot(config)
   ],
   providers: [],
   bootstrap: [AppComponent]
