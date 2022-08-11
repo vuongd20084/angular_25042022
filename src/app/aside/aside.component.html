@@ -1,10 +1,16 @@
 <aside>
   <h3>Danh mục sản phẩm</h3>
-  <ul>
-    <li *ngFor="let i of aside_data">
-      <a routerLink="/danhmuc/{{ i.slug }}">
-        {{ i.name }}
-      </a>
-    </li>
-  </ul>
+  <ngb-accordion #acc="ngbAccordion">
+    <ngb-panel title="{{ i.name }}" *ngFor="let i of aside_data">
+      <ng-template ngbPanelContent ngIf="i.childs[0]!=null">
+        <ul>
+          <li *ngFor="let j of i.childs">
+            <a routerLink="/danhmuc/{{ j.slug }}">
+              {{ j.name }}
+            </a>
+          </li>
+        </ul>
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
 </aside>

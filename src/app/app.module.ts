@@ -15,6 +15,10 @@ import { UserComponent } from './user/user.component';
 import { Page404Component } from './page404/page404.component';
 import { InfoComponent } from './info/info.component';
 
+//bootstrap
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
 //Sử dụng Api
 import {HttpClientModule} from '@angular/common/http'
 
@@ -45,7 +49,9 @@ const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
     AppRoutingModule,
     //import HttpClientModule after BrowserModule
     HttpClientModule,
-    SocketIoModule.forRoot(config)
+    SocketIoModule.forRoot(config),
+    //bootstrap
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,6 +14,6 @@ export class AppService {
   url = 'http://localhost:3000/api/'
 
   get_aside_data(){
-    return this.http.get(this.url + 'categories/get_aside_data')
+    return this.http.get(this.url + 'categories/aside')
   }
 }
