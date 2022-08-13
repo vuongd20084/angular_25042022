@@ -16,4 +16,12 @@ export class AppService {
   get_aside_data(){
     return this.http.get(this.url + 'categories/aside')
   }
+
+  get_single_list_categories(slug:any){
+    return this.http.get(this.url + 'categories/single_list/'+slug)
+  }
+
+  get_list_productCategories(id:any){
+    return this.http.get(this.url + 'products/productCategories/'+id)
+  }
 }

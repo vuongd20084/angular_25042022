@@ -17,3 +17,37 @@ body{
     margin-right: -5px;
     margin-left: -5px;
 }
+
+.products{
+    border: 1px solid #e9e9e9;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.products:hover{
+    border: 1px solid orange;
+}
+
+.products img{
+    border-radius: 5px;
+}
+
+.products h3{
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.products a{
+    text-decoration: none;
+    color: black;
+}
+
+.products .price{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.products:hover .price{
+    color: red;
+}

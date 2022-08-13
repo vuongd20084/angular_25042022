@@ -1,8 +1,6 @@
 .category{
-    background-color: green;
     padding: 10px;
     text-align: center;
     text-transform: uppercase;
-    color: white;
-    height: 400px;
+    color: black;
 }
