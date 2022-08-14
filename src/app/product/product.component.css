@@ -1,8 +1,43 @@
 .product{
-    background-color: violet;
     padding: 10px;
-    text-align: center;
-    text-transform: uppercase;
-    color: white;
-    height: 400px;
 }
+
+.product .star{
+    margin-bottom: 10px;
+}
+
+.product .star ul{
+    margin: 0;
+    padding: 0;
+}
+
+.product .star ul li{
+    display: inline-block;
+    color: orange;
+}
+
+.product p.description{
+    text-align: justify;
+}
+
+.input-group .btn-success{
+    margin: 0 10px !important;
+}
+
+.content{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.relative__products{
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.relative__products a{
+    font-size: 14px;
+}
+

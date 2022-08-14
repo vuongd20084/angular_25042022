@@ -21,6 +21,9 @@ export class CategoryComponent implements OnInit {
   id:any
   products:any
 
+  //pagination
+  p: number = 1;
+
   ngOnInit(): void {
     this.router
     .paramMap
@@ -37,7 +40,7 @@ export class CategoryComponent implements OnInit {
         .subscribe((kq:any)=>{
           this.products = kq['results']
 
-          console.log(this.products)
+          // console.log(this.products)
         })
       })
     })

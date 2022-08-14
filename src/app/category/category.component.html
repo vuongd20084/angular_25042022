@@ -1,6 +1,9 @@
 <div class="category">
   <div class="row">
-    <div class="col-md-4" *ngFor="let i of products">
+    <div
+      class="col-md-4"
+      *ngFor="let i of products | paginate: { itemsPerPage: 6, currentPage: p }"
+    >
       <div class="products">
         <a routerLink="/sanpham/{{ i.slug }}">
           <img src="/assets/images/Iphone11.jpg" class="img-fluid" />
@@ -12,4 +15,8 @@
       </div>
     </div>
   </div>
+  <pagination-controls
+    *ngIf="products != ''"
+    (pageChange)="p = $event"
+  ></pagination-controls>
 </div>

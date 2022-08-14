@@ -24,7 +24,7 @@ const routes: Routes = [
     component: CategoryComponent
   },
   {
-    path : 'sanpham',
+    path : 'sanpham/:id',
     component: ProductComponent
   },
   {

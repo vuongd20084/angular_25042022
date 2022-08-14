@@ -51,3 +51,30 @@ body{
 .products:hover .price{
     color: red;
 }
+
+/* product */
+.content h5{
+    margin-bottom: 20px;
+}
+.main h2 {
+    font-size: 20px;
+    margin: 0 0 15px;
+}
+
+.main p {
+    font-size: 15px;
+    line-height: 1.5;
+    padding-bottom: 20px;
+}
+
+.main h3 {
+    font-size: 18px;
+    margin: 0 0 15px;
+}
+
+.main img {
+    border: 0px;
+    max-width: 100%;
+    height: auto !important;
+}
+/* _______________________ */

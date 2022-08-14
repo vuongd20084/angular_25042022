@@ -24,4 +24,12 @@ export class AppService {
   get_list_productCategories(id:any){
     return this.http.get(this.url + 'products/productCategories/'+id)
   }
+
+  get_single_list_products(slug:any){
+    return this.http.get(this.url + 'products/single_list/'+slug)
+  }
+  
+  get_relative_products_lists(idCategory:any, idProduct:any){
+    return this.http.get(this.url + 'products/relative/'+idCategory+'/'+idProduct)
+  }
 }

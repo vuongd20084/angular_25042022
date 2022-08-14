@@ -27,6 +27,9 @@ import { ChatComponent } from './chat/chat.component';
 
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 
+//Pagination
+import {NgxPaginationModule} from 'ngx-pagination';
+
 const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
 @NgModule({
   declarations: [
@@ -51,7 +54,9 @@ const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
     HttpClientModule,
     SocketIoModule.forRoot(config),
     //bootstrap
-    NgbModule
+    NgbModule,
+    //Pagination
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
