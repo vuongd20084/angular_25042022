@@ -30,6 +30,10 @@ import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 //Pagination
 import {NgxPaginationModule} from 'ngx-pagination';
 
+import { ContactComponent } from './contact/contact.component';
+////form xử lý bên file html 
+import { FormsModule } from '@angular/forms';
+
 const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
 @NgModule({
   declarations: [
@@ -45,7 +49,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
     UserComponent,
     Page404Component,
     InfoComponent,
-    ChatComponent
+    ChatComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +61,9 @@ const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
     //bootstrap
     NgbModule,
     //Pagination
-    NgxPaginationModule
+    NgxPaginationModule,
+    //form xử lý bên file html
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

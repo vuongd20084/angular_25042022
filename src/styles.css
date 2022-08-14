@@ -78,3 +78,10 @@ body{
     height: auto !important;
 }
 /* _______________________ */
+/* Liên Hệ */
+.error{
+    font-size: 13px;
+    color: red;
+    font-style: italic;
+}
+/* _______________________ */

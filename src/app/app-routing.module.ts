@@ -13,6 +13,7 @@ import {Page404Component} from './page404/page404.component'
 
 //Call Guard app đẻ bảo vệ link
 import {AppGuard} from './app.guard'
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   {
@@ -32,10 +33,15 @@ const routes: Routes = [
     component: UserComponent
   },
   {
+    path : 'lienhe',
+    component: ContactComponent
+  },
+  {
     path : 'info',
     component: InfoComponent,
     canActivate: [AppGuard]
   },
+  
   {
     path : '**',
     component: Page404Component

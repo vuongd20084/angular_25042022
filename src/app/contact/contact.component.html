@@ -1,0 +1,82 @@
+<div class="contact">
+  <h1>Liên Hệ</h1>
+  <hr />
+  <form #contact="ngForm" (ngSubmit)="getData(contact)">
+    <div class="mb-3 mt-3">
+      <label for="name" class="form-label">Họ & Tên:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        placeholder="Ví dụ: Nguyễn Văn A"
+        [ngModel]="info.name"
+        required
+        #name="ngModel"
+      />
+      <span class="error" *ngIf="name.invalid && (name.dirty || name.touched)"
+        >Họ & Tên không đúng định dạng</span
+      >
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="email" class="form-label">Email:</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        placeholder="Ví dụ: nguyenvana@gmail.com"
+        [ngModel]="info.email"
+        required
+        #email="ngModel"
+      />
+      <span
+        class="error"
+        *ngIf="email.invalid && (email.dirty || email.touched)"
+        >Email không đúng định dạng</span
+      >
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="phone" class="form-label">Số Điện Thoại:</label>
+      <input
+        type="tel"
+        class="form-control"
+        id="phone"
+        name="phone"
+        placeholder="Ví dụ: 034.555.7777"
+        [ngModel]="info.phone"
+        required
+        #phone="ngModel"
+        pattern="[0-9]+"
+      />
+      <span
+        class="error"
+        *ngIf="phone.invalid && (phone.dirty || phone.touched)"
+        >Số điện thoại không đúng định dạng</span
+      >
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="address" class="form-label">Địa Chỉ:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="address"
+        name="address"
+        placeholder="Ví dụ: Ninh Kiều, Cần Thơ"
+        [ngModel]="info.address"
+        required
+        #address="ngModel"
+      />
+      <span
+        class="error"
+        *ngIf="address.invalid && (address.dirty || address.touched)"
+        >Địa chỉ không đúng định dạng</span
+      >
+    </div>
+
+    <hr />
+    <button type="submit" [disabled]="contact.invalid" class="btn btn-primary">
+      Gửi Liên Hệ
+    </button>
+  </form>
+</div>
