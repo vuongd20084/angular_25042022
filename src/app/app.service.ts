@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 //Sử dụng Api
-import {HttpClient} from '@angular/common/http'
+import {HttpClient, HttpHeaders} from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +12,9 @@ export class AppService {
   constructor(private http: HttpClient){}
 
   url = 'http://localhost:3000/api/'
+
+  //Cấu hình header
+  option = {headers: new HttpHeaders().set("Content-Type","application/x-www-form-urlencoded")}
 
   get_aside_data(){
     return this.http.get(this.url + 'categories/aside')
@@ -31,5 +34,16 @@ export class AppService {
   
   get_relative_products_lists(idCategory:any, idProduct:any){
     return this.http.get(this.url + 'products/relative/'+idCategory+'/'+idProduct)
+  }
+
+  post_contact(data:any){
+    var body = new URLSearchParams()
+
+    body.set('name', data.name)
+    body.set('email', data.email)
+    body.set('phone', data.phone)
+    body.set('address', data.address)
+
+    return this.http.post(this.url + 'contacts/add', body, this.option)
   }
 }

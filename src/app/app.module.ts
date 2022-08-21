@@ -32,7 +32,10 @@ import {NgxPaginationModule} from 'ngx-pagination';
 
 import { ContactComponent } from './contact/contact.component';
 ////form xử lý bên file html 
-import { FormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
+
+////Gọi thư viện sử dụng form trong file ts
+import {ReactiveFormsModule } from '@angular/forms';
 
 const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
 @NgModule({
@@ -64,6 +67,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
     NgxPaginationModule,
     //form xử lý bên file html
     FormsModule,
+    ////Gọi thư viện sử dụng form trong file ts
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
