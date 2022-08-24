@@ -7,13 +7,16 @@ import {ProductComponent} from './product/product.component'
 import {UserComponent} from './user/user.component'
 
 import {InfoComponent} from './info/info.component'
+import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './login/login.component';
+import { AdminProductComponent } from './admin-product/admin-product.component';
 
 //Các trang không tìm thấy
 import {Page404Component} from './page404/page404.component'
 
 //Call Guard app đẻ bảo vệ link
 import {AppGuard} from './app.guard'
-import { ContactComponent } from './contact/contact.component';
+
 
 const routes: Routes = [
   {
@@ -35,6 +38,14 @@ const routes: Routes = [
   {
     path : 'lienhe',
     component: ContactComponent
+  },
+  {
+    path : 'login',
+    component: LoginComponent
+  },
+  {
+    path : 'admin-product',
+    component: AdminProductComponent
   },
   {
     path : 'info',

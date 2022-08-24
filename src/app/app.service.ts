@@ -46,4 +46,22 @@ export class AppService {
 
     return this.http.post(this.url + 'contacts/add', body, this.option)
   }
+
+  post_login(data:any){
+    var body = new URLSearchParams()
+
+    body.set('username', data.username)
+    body.set('password', data.password)
+
+    return this.http.post(this.url + 'users/login', body, this.option)
+  }
+
+  post_add_product(data:any, token:any){
+    var body = new URLSearchParams()
+
+    body.set('name', data.name)
+    body.set('token', data.token)
+
+    return this.http.post(this.url + 'products/add', body, this.option)
+  }
 }

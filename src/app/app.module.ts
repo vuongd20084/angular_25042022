@@ -36,6 +36,8 @@ import { FormsModule} from '@angular/forms';
 
 ////Gọi thư viện sử dụng form trong file ts
 import {ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { AdminProductComponent } from './admin-product/admin-product.component';
 
 const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
 @NgModule({
@@ -53,7 +55,9 @@ const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
     Page404Component,
     InfoComponent,
     ChatComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent,
+    AdminProductComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,24 @@
+<h1>Thêm sản phẩm</h1>
+<form #product="ngForm" (ngSubmit)="getProduct(product)">
+  <div class="mb-3 mt-3">
+    <label for="name" class="form-label">Tên Sản Phẩm:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      name="name"
+      placeholder="Ví dụ: Samsung Galaxy Note 10"
+      ngModel
+      required
+      #name="ngModel"
+    />
+    <span class="error" *ngIf="name.invalid && (name.dirty || name.touched)"
+      >Tên Sản Phẩm không đúng định dạng</span
+    >
+  </div>
+
+  <hr />
+  <button type="submit" [disabled]="product.invalid" class="btn btn-primary">
+    Thêm Sảm Phẩm
+  </button>
+</form>

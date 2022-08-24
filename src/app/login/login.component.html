@@ -1,0 +1,45 @@
+<div class="login">
+  <h1>Login</h1>
+  <form #login="ngForm" (ngSubmit)="getLogin(login)">
+    <div class="mb-3 mt-3">
+      <label for="username" class="form-label">Tên Đăng Nhập:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        name="username"
+        placeholder="Ví dụ: nguyenvana"
+        ngModel
+        required
+        #username="ngModel"
+      />
+      <span
+        class="error"
+        *ngIf="username.invalid && (username.dirty || username.touched)"
+        >Tên Đăng Nhập không đúng định dạng</span
+      >
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="password" class="form-label">Mật Khẩu:</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+        placeholder="Ví dụ: ******"
+        ngModel
+        required
+        #password="ngModel"
+      />
+      <span
+        class="error"
+        *ngIf="password.invalid && (password.dirty || password.touched)"
+        >Mật Khẩu không đúng định dạng</span
+      >
+    </div>
+    <hr />
+    <button type="submit" [disabled]="login.invalid" class="btn btn-primary">
+      Login
+    </button>
+  </form>
+</div>

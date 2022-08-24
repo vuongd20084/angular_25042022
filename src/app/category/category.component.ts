@@ -25,6 +25,9 @@ export class CategoryComponent implements OnInit {
   p: number = 1;
 
   ngOnInit(): void {
+    //gọi localStorage
+    // console.log(localStorage.getItem('key'))
+
     this.router
     .paramMap
     .subscribe((params: ParamMap)=>{
