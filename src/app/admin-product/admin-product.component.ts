@@ -16,8 +16,16 @@ export class AdminProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  token = localStorage.getItem('token')
+
   getProduct(data:any){
-    console.log(data.value)
+    this.service
+    .post_add_product(data.value, this.token)
+    .subscribe((kq:any)=>{
+      console.log(kq)
+    })
+    
+    
   }
 
 }
