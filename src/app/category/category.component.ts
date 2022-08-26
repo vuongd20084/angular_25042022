@@ -5,7 +5,10 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 //Call service
 import { AppService } from '../app.service';
 
-
+//Call Redux Store
+import {Store} from '@ngrx/store'
+import {Cart} from '../models/cartModel'
+import {addCart} from '../cartStore/cartAction'
 
 
 @Component({
@@ -15,7 +18,11 @@ import { AppService } from '../app.service';
 })
 export class CategoryComponent implements OnInit {
 
-  constructor(private router: ActivatedRoute, private service: AppService) { }
+  constructor(
+    private router: ActivatedRoute, 
+    private service: AppService,
+    private store : Store<{cart: []}>
+    ) { }
 
   slug:any
   id:any
@@ -47,6 +54,15 @@ export class CategoryComponent implements OnInit {
         })
       })
     })
+  }
+
+  addToCart(id:any, name:any, slug:any, qty:any, price:any){
+    const cart = new Cart(id, name, slug, qty, price)
+
+    this.store
+    .dispatch(addCart(cart))
+
+    alert('Đã thêm vào giỏ')
   }
 
 }

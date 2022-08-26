@@ -39,6 +39,9 @@ import {ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { AdminProductComponent } from './admin-product/admin-product.component';
 
+//Gọi Redux Store
+import {StoreModule} from '@ngrx/store'
+import {cartReducer} from './cartStore/cartReducer'
 const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
 @NgModule({
   declarations: [
@@ -73,6 +76,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
     FormsModule,
     ////Gọi thư viện sử dụng form trong file ts
     ReactiveFormsModule,
+    //Gọi Redux Store
+    StoreModule.forRoot({ cart: cartReducer })
   ],
   providers: [],
   bootstrap: [AppComponent]

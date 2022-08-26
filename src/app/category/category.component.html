@@ -12,6 +12,13 @@
             Giá <span class="price">{{ i.price | number }}</span> vnđ
           </p>
         </a>
+        <button
+          class="btn btn-primary"
+          (click)="addToCart(i.id, i.name, i.slug, 1, i.price)"
+        >
+          <i class="fa fa-shopping-cart"></i>
+          Thêm vào giỏ
+        </button>
       </div>
     </div>
   </div>

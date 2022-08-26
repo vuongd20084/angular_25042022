@@ -3,6 +3,11 @@ import { Injectable } from '@angular/core';
 //Sử dụng Api
 import {HttpClient, HttpHeaders} from '@angular/common/http'
 
+//Sử dụng
+// import {Observable} from 'rxjs'
+// import {of} from 'rxjs'
+// import {map} from 'rxjs/operators'
+
 @Injectable({
   providedIn: 'root'
 })
@@ -64,4 +69,6 @@ export class AppService {
 
     return this.http.post(this.url + 'products/add', body, this.option)
   }
+
+
 }
