@@ -24,7 +24,7 @@ export class NavComponent implements OnInit {
   count:any
 
   ngOnInit(): void {
-    this.totalCart()
+    this.get_cart()
     .subscribe((kq)=>{
       this.count = kq.length
 
@@ -32,7 +32,7 @@ export class NavComponent implements OnInit {
     })
   }
 
-  totalCart(){
+  get_cart(){
     return this.cart.pipe(map((data:any)=>data))
   }
 
