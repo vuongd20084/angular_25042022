@@ -41,7 +41,8 @@ import { AdminProductComponent } from './admin-product/admin-product.component';
 
 //Gọi Redux Store
 import {StoreModule} from '@ngrx/store'
-import {cartReducer} from './cartStore/cartReducer'
+import {cartReducer} from './cartStore/cartReducer';
+import { CartComponent } from './cart/cart.component'
 const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
     ChatComponent,
     ContactComponent,
     LoginComponent,
-    AdminProductComponent
+    AdminProductComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

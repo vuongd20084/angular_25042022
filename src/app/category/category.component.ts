@@ -57,12 +57,23 @@ export class CategoryComponent implements OnInit {
   }
 
   addToCart(id:any, name:any, slug:any, qty:any, price:any){
-    const cart = new Cart(id, name, slug, qty, price)
+    if(price == null){
+      alert("Giá chưa có, vui lòng liên hệ sđt: 035...")
+    }else{
+      //Thêm dữ liệu vào giỏ hàng
+      const cart = new Cart(id, name, slug, qty, parseInt(price))
+      this.store
+        //dispatch đẩy dữ liệu đi
+        .dispatch(
+          //Thêm dữ liệ mới vào giỏ hàng
+          addCart(cart)
+          )
 
-    this.store
-    .dispatch(addCart(cart))
+      alert('Đã thêm vào giỏ')
+    }
+    
 
-    alert('Đã thêm vào giỏ')
+    
   }
 
 }
