@@ -11,6 +11,7 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { AdminProductComponent } from './admin-product/admin-product.component';
 import { CartComponent } from './cart/cart.component';
+import {PaymentComponent} from './payment/payment.component'
 //Các trang không tìm thấy
 import {Page404Component} from './page404/page404.component'
 
@@ -56,6 +57,10 @@ const routes: Routes = [
   {
     path : 'cart',
     component: CartComponent
+  },
+  {
+    path : 'payment',
+    component: PaymentComponent
   },
   {
     path : '**',

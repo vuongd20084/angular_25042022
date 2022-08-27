@@ -26,11 +26,19 @@ export class CartComponent implements OnInit {
   }
 
   products:any
+  total: any
 
   ngOnInit(): void {
     this.get_cart()
     .subscribe((kq)=>{
       this.products = kq
+
+      //Tính tổng tiền
+      this.total = 0
+
+      this.products.forEach((e:any)=>{
+        this.total += (e.price * e.qty)
+      })
 
       // console.log(kq)
     })

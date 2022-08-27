@@ -31,10 +31,10 @@
     </tr>
     <tr style="font-size: 20px; font-weight: bold">
       <td colspan="3" class="text-end">Tổng Tiền (VNĐ)</td>
-      <td class="text-danger" colspan="2">1</td>
+      <td class="text-danger" colspan="2">{{ total | number }}</td>
     </tr>
   </tbody>
 </table>
 
 <a routerLink="/" class="btn btn-info me-1">Mua Thêm</a>
-<button class="btn btn-warning">Thanh Toán</button>
+<a routerLink="/payment" class="btn btn-warning">Thanh Toán</a>
